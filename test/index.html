@@ -1,16 +1,38 @@
-# Jquery formify extension
-A tiny jquery extension to build forms from JSON schema.
-# Manual
-Include the minified file in your project
-````html
-<script type="text/javascript" src="js/jquery.formify.min.js"></script>
-````
-# Usage
-````javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="iso-8859-1">
+	<title>Testing formify plugin</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		.testing-form {
+			width: 50%;
+			margin: 0 auto;
+		}
+		.testing-form input {
+			margin: 10px 0px 10px 0px;
+		}
+		.btn-primary {
+			display: block;
+			min-width: 200px;
+			margin: 10px auto !important;
+		}
+	</style>
+</head>
+<body>
+
+<div class="testing-form">
+	<h1>Testing form</h1>
+	<div id="formify"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="../jquery.formify.js" type="text/javascript"></script>
+<script type="text/javascript">
 $('#formify').formify(
 		{
 			form : {
-				action : "http://127.0.0.1/form-validation.php",
+				action : "http://127.0.0.1/test.php",
 				method : "POST",
 			},
 			fields : [
@@ -60,6 +82,7 @@ $('#formify').formify(
 		]
 	}
 );
-````
-# ToDo
-+ Implement ajax and check inputs on form validation
+</script>
+
+</body>
+</html>
